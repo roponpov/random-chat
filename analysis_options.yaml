@@ -1,0 +1,54 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "lib/patch_android_files.dart"
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.gr.dart"
+  errors:
+    unused_import: warning
+    dead_code: warning
+
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+
+
+linter:
+  rules:
+    unnecessary_overrides: true
+    close_sinks: true
+    # ✅ Enforce const usage
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_const_declarations: true
+
+    # ✅ Enforce final for fields where possible
+    prefer_final_fields: true
+    prefer_final_locals: true
+    prefer_final_in_for_each: true
+
+    # ✅ Avoid using var when type is clear
+    #    always_specify_types: true
+
+    # ✅ Clean, efficient widget tree
+    avoid_unnecessary_containers: true
+    avoid_redundant_argument_values: true
+
+    # ✅ Safer builds
+    avoid_print: true
+    avoid_empty_else: true
+    avoid_dynamic_calls: true
+
+    # ✅ Code quality
+    unnecessary_this: true
+    prefer_single_quotes: true
+    prefer_relative_imports: true
+
+    # ✅ Null safety & immutability
+    prefer_const_constructors_in_immutables: true
+    use_key_in_widget_constructors: true
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
