@@ -4,7 +4,7 @@ class AppTheme {
   static final light = ThemeData(
     useMaterial3: true,
     brightness: Brightness.light,
-    scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+    scaffoldBackgroundColor: const Color(0xFF0f0e17),
     colorScheme: const ColorScheme(
       brightness: Brightness.light,
       primary: Color(0xFF134C67),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'blocs/home/home_bloc.dart';
 import 'blocs/splash/splash_bloc.dart';
 import 'blocs/splash/splash_event.dart';
 import 'core/routes/app_pages.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => SplashBloc()..add(StartTimer())),
+        BlocProvider(create: (context) => HomeBloc())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
