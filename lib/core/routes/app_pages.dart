@@ -1,3 +1,4 @@
+import '../../screens/chat/chat_screen.dart';
 import '../../screens/home/home_screen.dart';
 import '../../screens/splash/splash_screen.dart';
 import 'app_routes.dart';
@@ -5,6 +6,7 @@ import 'app_routes.dart';
 class AppPages {
   static final pages = {
     AppRoutes.splash: (context) => const SplashScreen(),
-    AppRoutes.home: (context) => const HomeScreen(),
+    AppRoutes.home: (context) => HomeScreen(),
+    AppRoutes.chat: (context) => const ChatScreen(),
   };
 }

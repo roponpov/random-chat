@@ -1,8 +1,10 @@
 abstract class HomeEvent {}
 
-class DisplayNameChanged extends HomeEvent {
+class NameChanged extends HomeEvent {
   final String name;
-  DisplayNameChanged(this.name);
+  NameChanged(this.name);
 }
 
-class RandomizeNameRequested extends HomeEvent {}
+class GenerateRandomName extends HomeEvent {}
+
+class SubmitDisplayName extends HomeEvent {}

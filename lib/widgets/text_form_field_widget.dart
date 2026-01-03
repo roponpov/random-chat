@@ -7,6 +7,7 @@ class TextFormFieldWidget extends StatelessWidget {
   final TextInputAction? textInputAction;
   final Widget? suffixIcon;
   final Color? suffixIconColor;
+  final Function(String)? onChanged;
   final String? Function(String?)? validator;
   final void Function(String)? onFieldSubmitted;
 
@@ -17,6 +18,7 @@ class TextFormFieldWidget extends StatelessWidget {
     this.obscureText,
     this.textInputAction,
     this.validator,
+    this.onChanged,
     this.suffixIcon,
     this.suffixIconColor,
     this.onFieldSubmitted,
@@ -30,6 +32,9 @@ class TextFormFieldWidget extends StatelessWidget {
       obscureText: obscureText ?? false,
       controller: controller,
       textInputAction: textInputAction,
+      style: theme.textTheme.labelLarge?.copyWith(
+        color: theme.colorScheme.onPrimary
+      ),
       decoration: InputDecoration(
         hintText: hintText,
         isDense: true,
@@ -63,6 +68,7 @@ class TextFormFieldWidget extends StatelessWidget {
         suffixIcon: suffixIcon,
         suffixIconColor: suffixIconColor,
       ),
+      onChanged: onChanged,
       validator: validator,
       onFieldSubmitted: onFieldSubmitted,
     );
