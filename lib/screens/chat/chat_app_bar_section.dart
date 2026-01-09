@@ -12,12 +12,36 @@ class ChatAppBarSection extends StatelessWidget implements PreferredSizeWidget{
         color: theme.colorScheme.onPrimary,
       ),
       backgroundColor: theme.scaffoldBackgroundColor,
-      title: Text(
-        'Random Chat',
-        style: theme.textTheme.bodyLarge?.copyWith(
-          color: theme.colorScheme.onPrimary,
-          fontWeight: FontWeight.bold,
-        ),
+      title: Column(
+        children: [
+          Text(
+            'Random Chat',
+            style: theme.textTheme.bodyLarge?.copyWith(
+              color: theme.colorScheme.onPrimary,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            spacing: 3,
+            children: [
+              Container(
+                width: 8,
+                height: 8,
+                decoration: const BoxDecoration(
+                  color: Colors.green,
+                  shape: BoxShape.circle,
+                ),
+              ),
+              Text(
+                'Online',
+                style: theme.textTheme.labelMedium?.copyWith(
+                  color: theme.colorScheme.onPrimary.withValues(alpha: .5),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
       actions: [
         FilledButton(

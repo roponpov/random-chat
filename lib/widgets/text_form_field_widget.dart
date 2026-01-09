@@ -6,6 +6,7 @@ class TextFormFieldWidget extends StatelessWidget {
   final bool? obscureText;
   final TextInputAction? textInputAction;
   final Widget? suffixIcon;
+  final EdgeInsetsGeometry? contentPending;
   final Color? suffixIconColor;
   final Function(String)? onChanged;
   final String? Function(String?)? validator;
@@ -20,6 +21,7 @@ class TextFormFieldWidget extends StatelessWidget {
     this.validator,
     this.onChanged,
     this.suffixIcon,
+    this.contentPending,
     this.suffixIconColor,
     this.onFieldSubmitted,
   });
@@ -36,6 +38,7 @@ class TextFormFieldWidget extends StatelessWidget {
         color: theme.colorScheme.onPrimary
       ),
       decoration: InputDecoration(
+        contentPadding: contentPending,
         hintText: hintText,
         isDense: true,
         hintStyle: theme.textTheme.labelLarge?.copyWith(
