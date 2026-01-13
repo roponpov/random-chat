@@ -6,20 +6,14 @@ class FakeChatMessageModelStreamingRepository {
     yield ChatMessageModel(
       text: 'Hey! Found someone finally.',
       sender: MessageSender.stranger,
-      time: DateTime.now(),
-    );
-
-    yield ChatMessageModel(
-      text: 'Hey! Found someone finally.',
-      sender: MessageSender.stranger,
-      time: DateTime.now(),
+      createdAt: DateTime.now(),
     );
 
     await Future.delayed(const Duration(seconds: 2));
     yield ChatMessageModel(
-      text: 'Hello 👋',
+      text: 'Hello How are you ?👋',
       sender: MessageSender.me,
-      time: DateTime.now(),
+      createdAt: DateTime.now(),
       seen: true,
     );
 
@@ -27,7 +21,7 @@ class FakeChatMessageModelStreamingRepository {
     yield ChatMessageModel(
       text: 'Nice to meet you!',
       sender: MessageSender.stranger,
-      time: DateTime.now(),
+      createdAt: DateTime.now(),
     );
   }
 }

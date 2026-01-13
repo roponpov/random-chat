@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/constants/app_icon_constant.dart';
+import '../../core/extension/date_time_extension.dart';
 import '../../models/chat_model.dart';
 
 class UserMessageSection extends StatelessWidget {
@@ -13,7 +14,7 @@ class UserMessageSection extends StatelessWidget {
     final MediaQueryData mediaQuery = MediaQuery.of(context);
 
     return Padding(
-      padding: const EdgeInsets.only(right: 16),
+      padding: const EdgeInsets.only(right: 16,bottom: 16),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
@@ -54,7 +55,7 @@ class UserMessageSection extends StatelessWidget {
                         spacing: 5,
                         children: [
                           Text(
-                            message.time.toString(),
+                            message.createdAt.formatTime(),
                             style: theme.textTheme.labelSmall?.copyWith(
                               color: theme.colorScheme.onPrimary,
                               fontWeight: FontWeight.normal,
