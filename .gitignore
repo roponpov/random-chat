@@ -39,6 +39,7 @@ Icon?
 build/
 .android/
 .ios/
+lib/module_configuration.dart
 .flutter-plugins
 .flutter-plugins-dependencies
 
